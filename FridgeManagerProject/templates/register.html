@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h2>Loin Page</h2><br>
+    <form action = '/register' {% csrf_token %}
+        First name
+        <br>
+        <input type="text" name = "first name">
+        <br>
+        Last name
+        <br>
+        <input type="text" name = "last name">
+        <br>
+        Enter Your email id
+        <br>
+        <input type="email" name = "emailid">
+        <br>
+        Enter password
+        <br>
+        <input type="password" name = "password"> 
+        <br>
+        <br>
+        <button type = "submit"> Go to Login </button>
+    </form>
+</div>
+</body>
+</html>

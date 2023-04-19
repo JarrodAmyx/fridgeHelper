@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h2>Login Page</h2><br>
+    <form action = '/home' method='get' {% csrf_token %}
+        Enter your email
+        <br>
+        <input type="email" name = "emailid">
+        <br>
+        Enter password
+        <br>
+        <input type="password" name = "password">
+        <br>
+        <br>
+        <button type = "submit"> Login </button>
+    </form>
+</div>
+</body>
+</html>
