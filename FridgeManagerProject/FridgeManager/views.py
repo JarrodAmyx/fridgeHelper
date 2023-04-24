@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Credential
+from django.contrib.auth.models import User, auth
+from django.shortcuts import render, redirect
 
 def index(request):
     return render(request,'index.html')
@@ -45,6 +47,10 @@ def login(request):
             return HttpResponse("Password Wrong <br> Please retry <a href='/loginpage'> Login </a>")
     else:
         return HttpResponse("Please retry <a href='/loginpage'> Login </a> OR <a href='/registerpage'> Register </a>")
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
 
 # def addFridge(request):
 #     pass
