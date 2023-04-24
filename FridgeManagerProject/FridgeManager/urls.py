@@ -7,5 +7,8 @@ urlpatterns = [
     path("loginpage/", views.gotologin, name="loginpage"),
     path("registerpage/", views.gotoregister, name="registerpage"),
     path("register/",views.register,name="register"),
-    path("home/", views.login, name="home")
+    path("homepage/", views.login, name="homepage"),
+    path("addfridgepage/", views.gotoaddFridge, name="addfridgepage"),
+    path("fridgepage/", views.gotoFridge, name="fridgepage"),
+    # path("redirect/", views.addFridge, name="redirect"),
 ]
