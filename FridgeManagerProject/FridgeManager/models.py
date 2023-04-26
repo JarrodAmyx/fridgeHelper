@@ -52,3 +52,32 @@ class Shelf(models.Model):
                     self.save()
                     return True
         return False
+
+
+
+class Item(models.Model):
+    name = models.CharField(max_length=255)
+    height = models.FloatField()
+    width = models.FloatField()
+    depth = models.FloatField()
+    expiration = models.DateField()
+
+    def getHeight(self):
+        return self.height
+
+    def getWidth(self):
+        return self.width
+
+    def getDepth(self):
+        return self.depth
+
+    def getName(self):
+        return self.name
+
+    def getExpiration(self):
+        return self.expiration
+    
+    def resize():
+        self.height = models.FloatField()
+        self.width = models.FloatField()
+        self.depth = models.FloatField()
