@@ -8,7 +8,7 @@ Our system provides users with the ability to create accounts, complete with the
 Our fridge management system has various features to manage space, expiration dates, and other attributes, such as providing reminders when an item's expiration date is approaching, reached, or exceeded. The system also alerts users when the available space in the fridge is running low, prompting them to remove an item before depositing another.
 
 ## System prerequisite
-1. Python must be preinstalled.
+1. Python must be pre-installed.
 To install python go to 
 [Download Python](https://www.python.org/downloads/)
 ## How to Start the application
@@ -16,7 +16,7 @@ Follow the below steps to use the application on your local windows machine.
 ### Step 1: 
 Download Zip file of the GitHub repository and unzip.
 ### Step 2:
-Open FeidgeManagerPeoject file in command terminal
+Open FridgeManagerPeoject file in command terminal
 
 ### Step 3:
 Run the following command in your terminal
@@ -38,6 +38,9 @@ https://127.0.0.1:8000/
 press <kbd>CTRL</kbd> and click the link generated in the terminal 
 ## How to terminate the application
 To terminate the program either kill the terminal or press <kbd>CTRL</kbd> + <kbd>C</kbd> in your command termianl
+
+## Side information
+Templates folder is the front-end part of the code(client-side), and rest of the files are back-end files(server-side). Make sure to keep the template folder inside the FridgeManagerProject in order to run the software successfully.
 
 ## Developers
 [Keshav Mehta](https://github.com/mehtaKeshav)
