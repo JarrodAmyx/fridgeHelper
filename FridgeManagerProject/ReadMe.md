@@ -1,4 +1,5 @@
 # Fridge Manager
+[Code link](https://github.com/JarrodAmyx/fridgeHelper)
 
 Introducing our innovative fridge management system, designed to make the daily task of managing the contents of a fridge effortless and efficient for every member of a household. With our system, users can easily manage one fridge and its several sections, including shelves, doors, produce sections, and an integrated freezer.
 
@@ -39,7 +40,7 @@ press <kbd>CTRL</kbd> and click the link generated in the terminal
 ## How to terminate the application
 To terminate the program either kill the terminal or press <kbd>CTRL</kbd> + <kbd>C</kbd> in your command termianl
 
-## Supplimentary information
+## Side information
 Templates folder is the front-end part of the code(client-side), and rest of the files are back-end files(server-side). Make sure to keep the template folder inside the FridgeManagerProject in order to run the software successfully.
 
 ## Developers
