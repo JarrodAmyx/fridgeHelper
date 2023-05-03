@@ -39,7 +39,7 @@ press <kbd>CTRL</kbd> and click the link generated in the terminal
 ## How to terminate the application
 To terminate the program either kill the terminal or press <kbd>CTRL</kbd> + <kbd>C</kbd> in your command termianl
 
-## Side information
+## Supplimentary information
 Templates folder is the front-end part of the code(client-side), and rest of the files are back-end files(server-side). Make sure to keep the template folder inside the FridgeManagerProject in order to run the software successfully.
 
 ## Developers
