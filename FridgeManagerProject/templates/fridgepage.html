@@ -7,6 +7,64 @@
     <title>Fridge</title>
 </head>
 <body>
-    Hello this is your Fridge
+    <h2>{{primary_user}}'s Fridge</h2>
+
+    <h3>Refrigerator dimentions:</h3>
+
+    Depth : <strong>{{ref_depth}} cm</strong>, <br> Width : <strong>{{ref_width}} cm</strong>, <br >Height : <strong>{{ref_height}} cm</strong>
+    <br>
+    The height of fridge : <strong>{{fridge_height}} cm</strong>
+    <br>    
+    The height of freezer : <strong>{{freezer_height}} cm</strong>
+    <br>
+    
+
+
+    Your items are: 
+    <br>
+    <br>     
+    {% for i in shelves %}
+        {% for j,k in i.items %}
+            {% if j != 'id' and j != 'primary_user' %}
+            
+            {% if j == 'items_list' %}
+                <strong>The items are:</strong>
+                {% for l in k %}
+                    {% for z,x in l.items %}
+                        {% if z == 'name'%}
+                            {{x}},
+                        {% endif %}
+                    {% endfor %}
+                    {% comment %} <br> {% endcomment %}
+                {% endfor %}
+                {% else %}
+                <strong>{{j}}</strong>:{{k}}
+                {% endif %}
+                <br>
+            {% endif %}
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+
+    Do u want to add or remove an item?
+    <br>
+    
+    <form action="/add_removeitemform">
+        {% comment %} <select name = "UserRef">
+            <option value="{{primary_user}}"> {{primary_user}}</option>
+        </select> {% endcomment %}
+        <button type = "submit" name = "User" value = {{primary_user}}> Add/remove item </button>
+    </form>
+    <br>
+    <form action="/homepage">
+        <button type = "submit"> Home </button>
+        </form> 
+    <br>
+    <form action="/loginpage">
+    <button type = "submit"> logout </button>
+    </form> 
+
+
 </body>
 </html>

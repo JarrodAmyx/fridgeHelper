@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>additemtofridge</title>
+</head>
+<body>
+    In which shelf of fridge would you like to add your item?
+
+    <div id='auto'>
+        <form action = '/additem'>
+            <select name = "shelf">
+                {% for i in fridgecounter %}
+                <option value="fridgeShelf{{i}}">shelf {{i}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <br>
+            add items from the list: 
+            <select name = "selected item">
+                {% for i in item %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <br>
+            Item expiry date:
+            <input type="date" name = "expiration">
+            <br>
+            <br>
+            
+            <button type = "submit"> add item </button>
+            
+        </form>
+        <br>
+        <button onClick = manual()> Add item manually </button>
+    </div>
+    <div id='manual'>
+
+    </div>
+
+    
+
+    {% comment %} <form action='/manually'>
+        Enter the dimentions of the item you want to add:
+        <br>
+        <br>
+        Item name:
+        <input type="text" name = "itemname">
+        <br>
+        <br>
+        Item height:
+        <input type="text" name = "itemheight">
+        <br>
+        <br>
+        Item width:
+        <input type="text" name = "itemwidth">
+        <br>
+        <br>
+        Item depth:
+        <input type="text" name = "itemdepth">
+        <br>
+        <br>
+        
+        
+    </form> {% endcomment %}
+
+    <script>
+        function manual() {
+        document.getElementById("manual").innerHTML = "<form action = '/additem'><select name = 'shelf'>{% for i in fridgecounter %}<option value='fridgeShelf{{i}}'>shelf {{i}}</option>{% endfor %}</select><br><br>enter the dimentions of the item you want to add:<br><br>item name:<input type='text' name = 'itemname'><br><br>item height:<input type='text' name = 'itemheight'><br><br>item width:<input type='text' name = 'itemwidth'><br><br>item depth:<input type='text' name = 'itemdepth'><br><br>item expiry date:<input type='date' name = 'expiration'><br><br><button type = 'submit'> add item </button><br><br></form><button onClick = auto()> Enter item from list </button>";
+        document.getElementById("auto").innerHTML = '';
+        }
+    </script>
+    <script>
+        function auto() {
+        document.getElementById("auto").innerHTML = "<form action = '/additem'><select name = 'shelf'>{% for i in fridgecounter %}<option value='fridgeShelf{{i}}'>shelf {{i}}</option>{% endfor %}</select><br><br>add items from the list: <select name = 'item'>{% for i in item %}<option value='items {{i}}'>{{i}}</option>{% endfor %}</select><br><br>Item expiry date:<input type='date' name = 'expiration'><br><br><button type = 'submit'> add item </button></form><br><button onClick = manual()> Add item manually </button>";
+        document.getElementById('manual').innerHTML = '';
+        }
+    </script>
+
+
+</body>
+</html>

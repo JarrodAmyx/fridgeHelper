@@ -88,7 +88,7 @@ DATABASES = {
             'NAME': '443Project',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': 'mongodb+srv://dhruv:123@cluster.s0wzgqq.mongodb.net/?retryWrites=true&w=majority'
+                'host': 'mongodb+srv://dhruv:123@cluster.s0wzgqq.mongodb.net/test'
             }  
         }
 }

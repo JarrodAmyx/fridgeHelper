@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Login Page</h2><br>
-    <form action = '/homepage' method='get' {% csrf_token %}
+    <form action = '/varifyLogin' method='get'> {% csrf_token %}
         Enter your email
         <br>
         <input type="email" name = "emailid">

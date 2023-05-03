@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_add_remove</title>
+</head>
+<body>
+    <br>
+    <h1>Users who have access to your fridge are:</h1>
+    <strong>Accounts linked to your Fridge:</strong>
+            {% for k in users %}
+                    {{k}}
+                    
+            {% endfor %}
+<br><br>
+    <strong>Add User</strong>
+    <form action = '/varify_add_User'>
+        <input type="email" name = "emailid">
+        <button type = "submit"> ADD </button>
+    </form>
+    <br><br>
+    
+
+    {% if users%}
+    <strong>Remove a user</strong>
+    <form action = '/varify_remove_user'>
+        <select name = "fridge">
+            {% for k in users%}
+            <option value="{{k}}"> {{k}}</option>
+            {% endfor %}
+        </select>
+        <button type = "submit"> REMOVE </button>
+    {% else %}
+    <strong>There are no users to remove</strong>
+    {% endif %}
+</body>
+</html>

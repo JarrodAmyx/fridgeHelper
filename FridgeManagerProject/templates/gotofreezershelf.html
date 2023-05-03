@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeitemfromfreezer</title>
+</head>
+<body>
+    Remove from which shelf of the freezer?
+    <br>
+    <form action = '/removeitemfromfreezer'>
+        <select name = "shelf">
+            {% for i in freezercounter %}
+            <option value="freezerShelf{{i}}">shelf {{i}}</option>
+            {% endfor %}
+        </select>
+        <button type = "submit"> see items </button>
+        
+    </form>
+</body>
+</html>
